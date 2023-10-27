@@ -87,14 +87,13 @@ pipeline {
             steps {
                 script {
                     bat "kubectl apply -f service.yml"
-                    bat "kubectl get svc"
                 }
             }
         }
         stage('Expose NodePort 8000') {
             steps {
                 script {
-                    bat "kubectl expose deployment poll-automation_pipeline-deployment --type=NodePort --port=8000"
+                    bat "kubectl expose deployment poll-app-deployment1 --type=NodePort --port=8000"
                 }
             }
         }
