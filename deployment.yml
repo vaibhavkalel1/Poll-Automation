@@ -1,17 +1,17 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: poll-app-deployment1
+  name: poll-app-deployment0
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: poll-app1
+      app: poll-app0
   template:
     metadata:
-      name: pollpod1
+      name: pollpod0
       labels:
-        app: poll-app1
+        app: poll-app0
     spec:
       containers:
       - name: pollcontainer
