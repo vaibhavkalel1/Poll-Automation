@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git') {
             steps {
-                git 'https://github.com/vaibhavkalel1/Automatio-Pipeline.git'
+                git 'https://github.com/vaibhavkalel1/Poll-Automation.git'
             }
         }
         stage('Build Docker Image') {
@@ -65,7 +65,7 @@ pipeline {
  
 
                     // Start Minikube
-                    bat "cd C:\\Users\\12826\\.jenkins\\workspace\\Automatio-Pipeline && ${minikubePath} start --driver=docker"
+                    bat "cd C:\\Users\\12826\\.jenkins\\workspace\\Poll-Automation && ${minikubePath} start --driver=docker"
                 }
             }
         }
