@@ -100,7 +100,7 @@ pipeline {
         stage('Get URL and play with Application') {
             steps {
                 script {
-                    bat "minikube service poll-app-service1"
+                    bat "minikube service poll-app-service0"
                 }
             }
         }
