@@ -75,7 +75,7 @@ pipeline {
                     bat "minikube status"
                 }
             }
-        }*/
+        }
         stage('Deploy to Kubernetes') {
             steps {
                 script {
@@ -87,6 +87,7 @@ pipeline {
             steps {
                 script {
                     bat "kubectl apply -f service.yml"
+                    bat "kubectl get svc"
                 }
             }
         }
