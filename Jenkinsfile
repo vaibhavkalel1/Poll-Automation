@@ -7,21 +7,21 @@ pipeline {
                 git 'https://github.com/vaibhavkalel1/Poll-Automation.git'
             }
         }
-        stage('Build Docker Image') {
+        /*stage('Build Docker Image') {
             steps {
                 script {
                     bat "docker build -t vaibhavkalel/pipelineimage ."
                 }
             }
-        }
-        stage('Cretae Docker Container') {
+        }*/
+        /*stage('Cretae Docker Container') {
             steps {
                 script {
                     bat "docker run -d --name automationcontainer -p 8000:8000  vaibhavkalel/pipelineimage"
                 }
             }
-        }
-        stage('Push Docker Images to Docker Hub') {
+        }*/
+        /*stage('Push Docker Images to Docker Hub') {
 
             steps {
 
@@ -44,18 +44,18 @@ pipeline {
                 }
 
             }
-        }
-        stage('Download Minikube for Windows') {
+        }*/
+        /*stage('Download Minikube for Windows') {
             steps {
                 bat 'curl -Lo minikube.exe https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe'
             }
-        }
-        stage('Install Minikube') {
+        }*/
+        /*stage('Install Minikube') {
             steps {
                 bat 'move minikube.exe C:\\Users\\12826'
                 bat 'setx PATH "%PATH%;C:\\minikube"'
             }
-        }
+        }*/
         stage('Start Minikube') {
             steps {
                 script {
@@ -66,10 +66,6 @@ pipeline {
 
                     // Start Minikube
                     bat "cd C:\\Users\\12826\\.jenkins\\workspace\\Poll-Automation && ${minikubePath} start --driver=docker"
-                    
-                    
-                    // Minikube Status
-                    bat "minikube status"
                 }
             }
         }
