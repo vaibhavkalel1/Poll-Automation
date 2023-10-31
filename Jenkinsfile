@@ -73,8 +73,9 @@ pipeline {
             steps {
                 script {
                     bat "minikube status"
-        
-        
+                }
+            }
+        }
         /*stage('Deploy to Kubernetes') {
             steps {
                 script {
