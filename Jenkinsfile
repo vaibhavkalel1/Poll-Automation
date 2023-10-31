@@ -66,16 +66,12 @@ pipeline {
 
                     // Start Minikube
                     bat "cd C:\\Users\\12826\\.jenkins\\workspace\\Poll-Automation && ${minikubePath} start --driver=docker"
-                }
-            }
-        }
-        stage('Minikube status') {
-            steps {
-                script {
+                    // Minikube Status
                     bat "minikube status"
                 }
             }
         }
+        
         stage('Deploy to Kubernetes') {
             steps {
                 script {
