@@ -93,7 +93,7 @@ pipeline {
         stage('Expose NodePort 8000') {
             steps {
                 script {
-                    bat "kubectl expose deployment poll-app-deployment1 --type=NodePort --port=8000"
+                    bat "kubectl expose deployment poll-app-deployment0 --type=NodePort --port=8000"
                 }
             }
         }
