@@ -69,7 +69,7 @@ pipeline {
                 }
             }
         }
-        /*stage('Minikube status') {
+        stage('Minikube status') {
             steps {
                 script {
                     bat "minikube status"
