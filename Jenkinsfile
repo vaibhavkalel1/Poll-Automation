@@ -98,12 +98,12 @@ pipeline {
                 }
             }
         }
-        stage('Get URL and play with Application') {
+        /*stage('Get URL and play with Application') {
             steps {
                 script {
                     bat "minikube service poll-automation-service2"
                 }
             }
-        }
+        }*/
     }
 }
