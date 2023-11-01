@@ -17,7 +17,7 @@ pipeline {
         stage('Cretae Docker Container') {
             steps {
                 script {
-                    bat "docker run -d --name automationcontainer1 -p 8000:8000  vaibhavkalel/pollimage1"
+                    bat "docker run -d --name pollcontainer1 -p 8000:8000  vaibhavkalel/pollimage1"
                 }
             }
         }
