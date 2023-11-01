@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: poll-automation-deployment
+  name: poll-automation-deployment1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: poll-app
+      app: poll-app1
   template:
     metadata:
-      name: pollpod
+      name: pollpod1
       labels:
-        app: poll-app
+        app: poll-app1
     spec:
       containers:
-      - name: pollcontainer
+      - name: pollcontainer1
         image: vaibhavkalel/pollimage1:latest
         command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
