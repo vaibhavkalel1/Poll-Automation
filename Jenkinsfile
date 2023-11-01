@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/vaibhavkalel1/Poll-Automation.git'
             }
         }
-        stage('Build Docker Image') {
+        /*stage('Build Docker Image') {
             steps {
                 script {
                     bat "docker build -t vaibhavkalel/automation1 ."
@@ -75,7 +75,7 @@ pipeline {
                     bat "minikube status"
                 }
             }
-        }
+        }*/
         stage('Deploy to Kubernetes') {
             steps {
                 script {
