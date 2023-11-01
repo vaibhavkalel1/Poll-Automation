@@ -10,14 +10,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat "docker build -t vaibhavkalel/pipelineimage ."
+                    bat "docker build -t vaibhavkalel/pollimage1 ."
                 }
             }
         }
         stage('Cretae Docker Container') {
             steps {
                 script {
-                    bat "docker run -d --name automationcontainer -p 8000:8000  vaibhavkalel/pipelineimage"
+                    bat "docker run -d --name automationcontainer1 -p 8000:8000  vaibhavkalel/pollimage1"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
 
                         // Push the Docker images to your Docker Hub repository
                      
-                        bat 'docker push vaibhavkalel/pipelineimage'
+                        bat 'docker push vaibhavkalel/pollimage1'
 
                     }
 
