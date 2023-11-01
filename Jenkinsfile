@@ -80,6 +80,7 @@ pipeline {
             steps {
                 script {
                     bat "kubectl apply -f deployment.yml"
+                    bat "kubectl get deployment"
                 }
             }
         }
