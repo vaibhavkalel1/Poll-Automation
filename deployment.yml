@@ -6,12 +6,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: poll-app1
+      app: poll-app2
   template:
     metadata:
-      name: pollpod1
+      name: pollpod2
       labels:
-        app: poll-app1
+        app: poll-app2
     spec:
       containers:
       - name: automationcontainer1
