@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: poll-automation-deployment1
+  name: poll-automation-deployment2
 spec:
   replicas: 1
   selector:
