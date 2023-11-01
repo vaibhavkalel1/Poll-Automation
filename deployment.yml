@@ -14,7 +14,7 @@ spec:
         app: poll-app1
     spec:
       containers:
-      - name: pollcontainer1
+      - name: pollcontainer2
         image: vaibhavkalel/pollimage1:latest
         command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
