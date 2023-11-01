@@ -17,7 +17,7 @@ pipeline {
         stage('Cretae Docker Container') {
             steps {
                 script {
-                    bat "docker run -d --name automationcontainer1 -p 8000:8000  vaibhavkalel/automationimage1"
+                    bat "docker run -d --name automationcontainer1 -p 8000:8000  vaibhavkalel/automation1"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
 
                         // Push the Docker images to your Docker Hub repository
                      
-                        bat 'docker push vaibhavkalel/automationimage1'
+                        bat 'docker push vaibhavkalel/automation1'
 
                     }
 
